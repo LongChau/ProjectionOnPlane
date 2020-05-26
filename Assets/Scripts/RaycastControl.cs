@@ -47,9 +47,4 @@ public class RaycastControl : MonoBehaviour
             _targetSprite.eulerAngles = eulerRotation;
         }
     }
-
-    private void FaceDirection()
-    {
-
-    }
 }
