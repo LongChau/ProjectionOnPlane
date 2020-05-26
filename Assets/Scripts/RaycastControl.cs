@@ -41,6 +41,15 @@ public class RaycastControl : MonoBehaviour
             Debug.DrawRay(hit.point, projected, Color.red);
 
             _targetSprite.forward = -hit.normal;
+
+            var eulerRotation = _targetSprite.eulerAngles;
+            eulerRotation.z = transform.rotation.eulerAngles.z;
+            _targetSprite.eulerAngles = eulerRotation;
         }
+    }
+
+    private void FaceDirection()
+    {
+
     }
 }

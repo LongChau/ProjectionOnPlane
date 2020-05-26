@@ -32,7 +32,7 @@ public class Shooting : MonoBehaviour
                 // Do something with the object that was hit by the raycast.
                 _targetSprite.position = hit.point + hit.normal * 0.005f;
                 _targetSprite.forward = hit.normal;
-                //_targetSprite.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
+                _targetSprite.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
             }
         }
     }
