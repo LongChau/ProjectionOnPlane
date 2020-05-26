@@ -27,10 +27,12 @@ public class RaycastControl : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(new Ray(transform.position, transform.forward), out hit, _distance, _layerMask))
         {
-            Debug.Log(hit.point);
+            //Debug.Log(hit.point);
 
             // this is normal ray.
             Debug.DrawRay(hit.point, hit.normal, Color.blue);
+
+            Debug.Log(hit.normal);
 
             _targetSprite.position = hit.point;
             var projected = Vector3.ProjectOnPlane(transform.forward, hit.normal);
